@@ -1,0 +1,35 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: talk_pdesoft.ipynb
+
+parts:
+  - caption: First examples
+    numbered: True
+    chapters:
+    - file: wta/elasticity3D.ipynb
+    - file: wta/coil.ipynb
+    - file: wta/elasticity.ipynb    
+    - file: wta/shell.ipynb
+    - file: wta/tesla.ipynb
+
+
+  - caption: Model templates
+    numbered: True
+    chapters:
+    - file: modeltemplates/NavierStokesMT.ipynb
+    - file: modeltemplates/natconv.ipynb
+    - file: notebooks/morphing.ipynb
+    - file: notebooks/parallelstokes.ipynb        
+
+
+  - caption: Recent development
+    numbered: True
+    chapters:
+    - file: recent/solverlayers.ipynb
+    - file: recent/wave_cuda.ipynb
+    - file: notebooks/Curvature.ipynb
+    - file: mycpp/myhighorder.ipynb
+    - file: WebApp.ipynb    
+
