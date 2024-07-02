@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NGSolve: Advanced Finite Elements and High Performance Computing &#8212; NGSolve@PDESoft 2024</title>
+    <title>An overview to Netgen/NGSolve &#8212; NGSolve@PDESoft 2024</title>
   
   
   
@@ -170,7 +170,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    NGSolve: Advanced Finite Elements and High Performance Computing
+                    An overview to Netgen/NGSolve
                 </a>
             </li>
         </ul>
@@ -179,22 +179,27 @@
 <li class="toctree-l1"><a class="reference internal" href="wta/elasticity3D.html">1. 3D Solid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wta/coil.html">2. Magnetostatics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wta/elasticity.html">3. Nonlinear Elasticity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wta/shell.html">4. Naghdi shell</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wta/tesla.html">5. Instationary Navier-Stokes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="wta/shell.html">4. Naghdi shell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="wta/Sydney.html">4.2. Sydney</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Model templates</span></p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Flow Problems</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="modeltemplates/NavierStokesMT.html">6. NGSolve Model Templates:</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modeltemplates/natconv.html">7. Natural Convection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/morphing.html">8. Navier-Stokes on moving domains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/parallelstokes.html">9. Solving Stokes, in parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wta/tesla.html">5. Tesla Valve</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modeltemplates/NavierStokesMT.html">6. NGSolve Model Templates:</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="modeltemplates/natconv.html">6.3. Natural Convection</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/morphing.html">7. Navier-Stokes on moving domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/parallelstokes.html">8. Solving Stokes, in parallel</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Recent development</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="recent/solverlayers.html">10. Solver Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recent/wave_cuda.html">11. Discontinuous Galerkin for the Wave Equation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/Curvature.html">12. Computation of Curvature</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mycpp/myhighorder.html">13. Implementation of High Order Finite Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recent/solverlayers.html">9. Solver Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recent/wave_cuda.html">10. Discontinuous Galerkin for the Wave Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Curvature.html">11. Computation of Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mycpp/myhighorder.html">12. Implementation of High Order Finite Elements</a></li>
 </ul>
 
     </div>
@@ -348,7 +353,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>NGSolve: Advanced Finite Elements and High Performance Computing</h1>
+    <h1>An overview to Netgen/NGSolve</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,14 +381,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ngsolve-advanced-finite-elements-and-high-performance-computing">
-<h1>NGSolve: Advanced Finite Elements and High Performance Computing<a class="headerlink" href="#ngsolve-advanced-finite-elements-and-high-performance-computing" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="an-overview-to-netgen-ngsolve">
+<h1>An overview to Netgen/NGSolve<a class="headerlink" href="#an-overview-to-netgen-ngsolve" title="Link to this heading">#</a></h1>
 <p><strong>Joachim Schöberl</strong> <br>
 TU Wien</p>
 <a class="reference internal image-reference" href="_images/TU_Wien.png"><img alt="_images/TU_Wien.png" src="_images/TU_Wien.png" style="width: 100px;" />
 </a>
-<p>with contributions by</p>
-<p><strong>Jay Gopalakrishnan</strong>, Portland State University<br>
+<p>with contributions by
+<strong>Jay Gopalakrishnan</strong>, Portland State University<br>
 <strong>Christoph Lehrenfeld</strong>, Georg-August-Universität Göttingen <br>
 <strong>Philip Lederer</strong>, Twente University<br>
 <strong>Michael Neunteufel</strong>, TU Wien<br>
@@ -391,7 +396,7 @@ TU Wien</p>
 <strong>Astrid Pechstein</strong>, Johannes Kepler University Linz<br>
 <strong>Lukas Kogler</strong>, Siemens Industry Software GmbH <br>
 <strong>Matthias Hochsteger</strong>, <strong>Christopher Lackner</strong>, CERBSim GmbH</p>
-<p><strong><strong>PDE Soft 2024, Cambridge, July 2024</strong></strong></p>
+<p><strong><strong>p<span class="math notranslate nohighlight">\(\partial\)</span>esoft 2024, Cambridge, July 2024</strong></strong></p>
 <p>This presentation uses the open-source finite element library NGSolve (<a class="reference external" href="http://www.ngsolve.org">www.ngsolve.org</a>) within Jupyter Notebooks.</p>
 <a class="reference internal image-reference" href="_images/NGSlogo.png"><img alt="_images/NGSlogo.png" class="align-center" src="_images/NGSlogo.png" style="width: 200px;" />
 </a>
@@ -405,11 +410,12 @@ TU Wien</p>
 <li><p><a class="reference internal" href="wta/elasticity3D.html"><span class="std std-doc">Elasticity</span></a></p></li>
 <li><p><a class="reference internal" href="wta/coil.html"><span class="std std-doc">Maxwell</span></a></p></li>
 <li><p><a class="reference internal" href="wta/elasticity.html"><span class="std std-doc">Nonlinear Elasticity</span></a></p></li>
-<li><p><a class="reference internal" href="wta/shell.html"><span class="std std-doc">Shell model</span></a></p></li>
+<li><p>Shells: <a class="reference internal" href="wta/shell.html"><span class="std std-doc">Cylinder</span></a> <a class="reference internal" href="wta/Sydney.html"><span class="std std-doc">Sydney</span></a></p></li>
+<li><p><a class="reference internal" href="wta/tesla.html"><span class="std std-doc">Navier Stokes</span></a></p></li>
 </ul>
 <p>If you like to try out this talk on your computer:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python3 -m pip install numpy scipy matplotlib ipywidgets jupyter notebook 
-python3 -m pip install --pre --upgrade ngsolve webgui_jupyter_widgets
+python3 -m pip install --upgrade ngsolve webgui_jupyter_widgets
 </pre></div>
 </div>
 <p>Download notebooks from the jupyter-book, and run them like</p>
@@ -427,6 +433,7 @@ pwd: <strong>solve!xx</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docu.ngsolve.org/latest/i-tutorials/index.html">NGSolve tutorials</a></p></li>
 <li><p><a class="reference external" href="https://jschoeberl.github.io/iFEM/intro.html">NGSolve-based finite element class</a></p></li>
+<li><p><a class="reference external" href="https://docu.ngsolve.org/ngs24/intro.html">NGSolve24 tutorials</a></p></li>
 </ul>
 </section>
 <section id="software-design">
