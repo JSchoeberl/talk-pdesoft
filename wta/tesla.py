@@ -1,3 +1,5 @@
+# P. Lederer, X. Mooslechner, E. Bonetti
+
 from ngsolve import *
 from netgen.occ import *
 

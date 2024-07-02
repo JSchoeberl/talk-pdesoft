@@ -12,17 +12,18 @@ parts:
     - file: wta/coil.ipynb
     - file: wta/elasticity.ipynb    
     - file: wta/shell.ipynb
-    - file: wta/tesla.ipynb
+      sections:
+      - file: wta/Sydney.ipynb
 
-
-  - caption: Model templates
+  - caption: Flow Problems
     numbered: True
     chapters:
+    - file: wta/tesla.ipynb
     - file: modeltemplates/NavierStokesMT.ipynb
-    - file: modeltemplates/natconv.ipynb
+      sections:    
+      - file: modeltemplates/natconv.ipynb
     - file: notebooks/morphing.ipynb
     - file: notebooks/parallelstokes.ipynb        
-
 
   - caption: Recent development
     numbered: True
@@ -31,5 +32,5 @@ parts:
     - file: recent/wave_cuda.ipynb
     - file: notebooks/Curvature.ipynb
     - file: mycpp/myhighorder.ipynb
-    - file: WebApp.ipynb    
+
 
