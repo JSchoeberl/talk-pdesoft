@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>An overview to Netgen/NGSolve &#8212; NGSolve@PDESoft 2024</title>
+    <title>An overview of Netgen/NGSolve &#8212; NGSolve@PDESoft 2024</title>
   
   
   
@@ -170,7 +170,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    An overview to Netgen/NGSolve
+                    An overview of Netgen/NGSolve
                 </a>
             </li>
         </ul>
@@ -200,6 +200,7 @@
 <li class="toctree-l1"><a class="reference internal" href="recent/wave_cuda.html">10. Discontinuous Galerkin for the Wave Equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Curvature.html">11. Computation of Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mycpp/myhighorder.html">12. Implementation of High Order Finite Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recent/WebApp.html">13. CERBSim WebApp</a></li>
 </ul>
 
     </div>
@@ -353,7 +354,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>An overview to Netgen/NGSolve</h1>
+    <h1>An overview of Netgen/NGSolve</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,8 +382,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="an-overview-to-netgen-ngsolve">
-<h1>An overview to Netgen/NGSolve<a class="headerlink" href="#an-overview-to-netgen-ngsolve" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="an-overview-of-netgen-ngsolve">
+<h1>An overview of Netgen/NGSolve<a class="headerlink" href="#an-overview-of-netgen-ngsolve" title="Link to this heading">#</a></h1>
 <p><strong>Joachim Schöberl</strong> <br>
 TU Wien</p>
 <a class="reference internal image-reference" href="_images/TU_Wien.png"><img alt="_images/TU_Wien.png" src="_images/TU_Wien.png" style="width: 100px;" />
@@ -391,7 +392,7 @@ TU Wien</p>
 <strong>Jay Gopalakrishnan</strong>, Portland State University<br>
 <strong>Christoph Lehrenfeld</strong>, Georg-August-Universität Göttingen <br>
 <strong>Philip Lederer</strong>, Twente University<br>
-<strong>Michael Neunteufel</strong>, TU Wien<br>
+<strong>Michael Neunteufel</strong>, Portland State University<br>
 <strong>Sabine Zaglmayr</strong>, Dassault Systems <br>
 <strong>Astrid Pechstein</strong>, Johannes Kepler University Linz<br>
 <strong>Lukas Kogler</strong>, Siemens Industry Software GmbH <br>
@@ -484,7 +485,7 @@ In particular high order methods for Maxwell equations (S. Zaglmayr) and Elastic
 <li><p><a class="reference internal" href="notebooks/wave_cuda.html"><span class="std std-doc">DG for waves on GPUs</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/Curvature.html"><span class="std std-doc">Calculation of Curvature</span></a></p></li>
 <li><p><a class="reference internal" href="mycpp/myhighorder.html"><span class="std std-doc">Programming my own FiniteElement</span></a></p></li>
-<li><p><a class="reference internal" href="#WebApp.ipynb"><span class="xref myst">NGSolve-WebApp</span></a></p></li>
+<li><p><a class="reference internal" href="recent/WebApp.html"><span class="std std-doc">NGSolve-WebApp</span></a></p></li>
 </ul>
 </section>
 <section id="packages-on-top-of-ngsolve">
@@ -495,13 +496,10 @@ In particular high order methods for Maxwell equations (S. Zaglmayr) and Elastic
 <li><p><a class="reference external" href="https://docu.ngsolve.org/latest/i-tutorials/index.html#shape-and-topology-optimization">shape optimization</a> by P. Gangl, K. Sturm</p></li>
 <li><p>model order reduction <a class="reference external" href="https://pymor.org">pyMOR</a> by R. Milk, S. Rave, F. Schindler</p></li>
 <li><p>boundary elements with NGSolve <a class="reference external" href="https://github.com/Weggler/ngbem">ngbem</a> with L. Weggler and D. Seibold</p></li>
-<li><p>dual-cell time-stepping for Maxwell with M. Wess, B. Kapidani and L. Codecasa</p></li>
+<li><p><a class="reference external" href="https://ngsolve.github.io/dcm/intro.html">cell-method</a> time-stepping for Maxwell with M. Wess, B. Kapidani and L. Codecasa</p></li>
 <li><p><a class="reference external" href="https://ngspetsc.readthedocs.io/en/latest">ngsPETSc</a> PETSc interface, U. Zerbinati et al</p></li>
 </ul>
-<p>If you like to hear more of NGSolve:</p>
-<ul class="simple">
-<li><p><strong>NGSolve User Meeting 2024: Vienna, June 17-19</strong></p></li>
-</ul>
+<p>A lot of new material from the NGSolve User Meeting 2024: <a class="reference external" href="https://docu.ngsolve.org/ngs24/intro.html#">NGS24</a></p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
