@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>13. CERBSim WebApp &#8212; NGSolve@PDESoft 2024</title>
+    <title>14. CERBSim WebApp &#8212; NGSolve@PDESoft 2024</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'recent/WebApp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="12. Implementation of High Order Finite Elements" href="../mycpp/myhighorder.html" />
+    <link rel="prev" title="13. Implementation of High Order Finite Elements" href="../mycpp/myhighorder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,7 +173,10 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">First examples</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../wta/elasticity3D.html">1. 3D Solid Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wta/coil.html">2. Magnetostatics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../wta/coil.html">2. Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../transformer/transformer.html">2.5. Transformers</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../wta/elasticity.html">3. Nonlinear Elasticity</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../wta/shell.html">4. Shells</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../wta/Sydney.html">4.2. Sydney</a></li>
@@ -195,8 +198,9 @@
 <li class="toctree-l1"><a class="reference internal" href="solverlayers.html">9. Solver Layers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wave_cuda.html">10. Discontinuous Galerkin for the Wave Equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/Curvature.html">11. Computation of Curvature</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mycpp/myhighorder.html">12. Implementation of High Order Finite Elements</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. CERBSim WebApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrixvalued.html">12. Matrix-valued FE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mycpp/myhighorder.html">13. Implementation of High Order Finite Elements</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">14. CERBSim WebApp</a></li>
 </ul>
 
     </div>
@@ -363,7 +367,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cerbsim-webapp">
-<h1><span class="section-number">13. </span>CERBSim WebApp<a class="headerlink" href="#cerbsim-webapp" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">14. </span>CERBSim WebApp<a class="headerlink" href="#cerbsim-webapp" title="Link to this heading">#</a></h1>
 <p>The NGSolve language is very flexible - but maybe too complex for practical engineers.</p>
 <p>The TU-Wien startup CERBSim is building apps on top of NGSolve, for specific applications.</p>
 <a class="reference internal image-reference" href="../_images/cerbsim-team.png"><img alt="../_images/cerbsim-team.png" class="align-center" src="../_images/cerbsim-team.png" style="width: 200px;" />
@@ -415,7 +419,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">12. </span>Implementation of High Order Finite Elements</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Implementation of High Order Finite Elements</p>
       </div>
     </a>
 </div>

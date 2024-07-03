@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -177,7 +177,10 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">First examples</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="wta/elasticity3D.html">1. 3D Solid Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wta/coil.html">2. Magnetostatics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="wta/coil.html">2. Magnetostatics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="transformer/transformer.html">2.5. Transformers</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="wta/elasticity.html">3. Nonlinear Elasticity</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="wta/shell.html">4. Shells</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="wta/Sydney.html">4.2. Sydney</a></li>
@@ -199,8 +202,9 @@
 <li class="toctree-l1"><a class="reference internal" href="recent/solverlayers.html">9. Solver Layers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recent/wave_cuda.html">10. Discontinuous Galerkin for the Wave Equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Curvature.html">11. Computation of Curvature</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mycpp/myhighorder.html">12. Implementation of High Order Finite Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recent/WebApp.html">13. CERBSim WebApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recent/matrixvalued.html">12. Matrix-valued FE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mycpp/myhighorder.html">13. Implementation of High Order Finite Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recent/WebApp.html">14. CERBSim WebApp</a></li>
 </ul>
 
     </div>
@@ -367,7 +371,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-first-examples">Some first examples:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-design">Software design:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-spaces">Function spaces:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-templates">Model templates:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-problems">Flow problems:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#history">History:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recent-developemnt">Recent developemnt:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages-on-top-of-ngsolve">Packages on top of NGSolve</a></li>
@@ -409,7 +413,7 @@ TU Wien</p>
 <h2>Some first examples:<a class="headerlink" href="#some-first-examples" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="wta/elasticity3D.html"><span class="std std-doc">Elasticity</span></a></p></li>
-<li><p><a class="reference internal" href="wta/coil.html"><span class="std std-doc">Maxwell</span></a></p></li>
+<li><p>Maxwell: <a class="reference internal" href="wta/coil.html"><span class="std std-doc">coil</span></a> <a class="reference internal" href="transformer/transformer.html"><span class="std std-doc">transformer</span></a></p></li>
 <li><p><a class="reference internal" href="wta/elasticity.html"><span class="std std-doc">Nonlinear Elasticity</span></a></p></li>
 <li><p>Shells: <a class="reference internal" href="wta/shell.html"><span class="std std-doc">Cylinder</span></a> <a class="reference internal" href="wta/Sydney.html"><span class="std std-doc">Sydney</span></a></p></li>
 <li><p><a class="reference internal" href="wta/tesla.html"><span class="std std-doc">Navier Stokes</span></a></p></li>
@@ -456,9 +460,10 @@ pwd: <strong>solve!xx</strong></p>
 <li><p>Spaces on surfaces, and on interelement-facets</p></li>
 </ul>
 </section>
-<section id="model-templates">
-<h2>Model templates:<a class="headerlink" href="#model-templates" title="Link to this heading">#</a></h2>
+<section id="flow-problems">
+<h2>Flow problems:<a class="headerlink" href="#flow-problems" title="Link to this heading">#</a></h2>
 <ul class="simple">
+<li><p><a class="reference internal" href="wta/tesla.html"><span class="std std-doc">Tesla valve</span></a></p></li>
 <li><p><a class="reference internal" href="modeltemplates/NavierStokesMT.html"><span class="std std-doc">Navier Stokes</span></a></p></li>
 <li><p><a class="reference internal" href="modeltemplates/natconv.html"><span class="std std-doc">Natural Convection</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/morphing.html"><span class="std std-doc">Domain morphing</span></a></p></li>
@@ -568,7 +573,7 @@ In particular high order methods for Maxwell equations (S. Zaglmayr) and Elastic
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-first-examples">Some first examples:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-design">Software design:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-spaces">Function spaces:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-templates">Model templates:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-problems">Flow problems:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#history">History:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recent-developemnt">Recent developemnt:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages-on-top-of-ngsolve">Packages on top of NGSolve</a></li>
